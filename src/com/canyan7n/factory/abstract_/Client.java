@@ -26,6 +26,10 @@ public class Client {
         xioamiRouter.start();
         xioamiRouter.stop();
         xioamiRouter.router();
+        Computer xiaomiComputer = xiaomiFactory.getComputer();
+        xiaomiComputer.start();
+        xiaomiComputer.stop();
+        xiaomiComputer.work();
         System.out.println("===华为生产线===");
         HuaweiFactory huaweiFactory = new HuaweiFactory();
         Phone huaweiPhoen = huaweiFactory.getPhone();
@@ -36,6 +40,10 @@ public class Client {
         huaweiRouter.start();
         huaweiRouter.stop();
         huaweiRouter.router();
+        Computer huaweiComputer = huaweiFactory.getComputer();
+        huaweiComputer.start();
+        huaweiComputer.stop();
+        huaweiComputer.work();
         System.out.println("===苹果生产线===");
         AppleFactory appleFactory = new AppleFactory();
         Phone applePhone = appleFactory.getPhone();
@@ -46,5 +54,9 @@ public class Client {
         appleRouter.start();
         appleRouter.stop();
         appleRouter.router();
+        Computer appleComputer = appleFactory.getComputer();
+        appleComputer.start();
+        appleComputer.stop();
+        appleComputer.work();
     }
 }
