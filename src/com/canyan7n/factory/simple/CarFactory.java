@@ -15,4 +15,8 @@ public class CarFactory {
     public static Car getTesla(){
         return new Tesla();
     }
+
+    public static Car getMobai(){
+        return new Mobai();
+    }
 }

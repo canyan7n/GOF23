@@ -22,5 +22,8 @@ public class Client {
         Car tesla = CarFactory.getTesla();
         wulin.name();
         tesla.name();
+
+        Car mobai = CarFactory.getMobai();
+        mobai.name();
     }
 }
