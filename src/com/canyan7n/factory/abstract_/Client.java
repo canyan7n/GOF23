@@ -10,6 +10,7 @@ package com.canyan7n.factory.abstract_;
 
 /**
  * 模拟科技公司的产品固定，使用抽象工厂生产产品
+ * 产品等级固定，扩展展品族
  */
 public class Client {
 
@@ -34,5 +35,15 @@ public class Client {
         huaweiRouter.start();
         huaweiRouter.stop();
         huaweiRouter.router();
+        System.out.println("===苹果生产线===");
+        AppleFactory appleFactory = new AppleFactory();
+        Phone applePhone = appleFactory.getPhone();
+        applePhone.start();
+        applePhone.stop();
+        applePhone.sendMsg();
+        Router appleRouter = appleFactory.getRouter();
+        appleRouter.start();
+        appleRouter.stop();
+        appleRouter.router();
     }
 }
