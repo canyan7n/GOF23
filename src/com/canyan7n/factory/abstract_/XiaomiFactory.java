@@ -17,4 +17,9 @@ public class XiaomiFactory implements ProductFactory{
     public Router getRouter() {
         return new XiaomuRouter();
     }
+
+    @Override
+    public Computer getComputer() {
+        return null;
+    }
 }

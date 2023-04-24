@@ -11,6 +11,7 @@ package com.canyan7n.factory.abstract_;
 /**
  * 模拟科技公司的产品固定，使用抽象工厂生产产品
  * 产品等级固定，扩展展品族
+ * 如果要扩展产品等级，就要修改抽象工厂及其它的实现，违反开闭原则
  */
 public class Client {
 

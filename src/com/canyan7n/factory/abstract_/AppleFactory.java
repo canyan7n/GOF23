@@ -17,4 +17,9 @@ public class AppleFactory implements ProductFactory{
     public Router getRouter() {
         return new AppleRouter();
     }
+
+    @Override
+    public Computer getComputer() {
+        return null;
+    }
 }

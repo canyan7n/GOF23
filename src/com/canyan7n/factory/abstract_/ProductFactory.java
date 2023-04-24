@@ -13,4 +13,7 @@ public interface ProductFactory {
     public Phone getPhone();
     //生成路由器
     public Router getRouter();
+
+    //生成电脑
+    public Computer getComputer();
 }

@@ -17,4 +17,9 @@ public class HuaweiFactory implements ProductFactory{
     public Router getRouter() {
         return new HuaweiRouter();
     }
+
+    @Override
+    public Computer getComputer() {
+        return null;
+    }
 }
