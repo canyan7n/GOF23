@@ -20,11 +20,14 @@ public class Client {
         //工厂方法方式
         TeslaFactory teslaFactory = new TeslaFactory();
         Car tesla = teslaFactory.getCar();
-
         WulinFactory wulinFactory = new WulinFactory();
         Car wulin = wulinFactory.getCar();
-
         tesla.name();
         wulin.name();
+
+        //扩展新产品，不需要修改修改，只需扩展一个新的对应产品的工厂
+        MobaiFactory mobaiFactory = new MobaiFactory();
+        Car mobai = mobaiFactory.getCar();
+        mobai.name();
     }
 }

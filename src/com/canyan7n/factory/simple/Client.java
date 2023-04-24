@@ -23,6 +23,7 @@ public class Client {
         wulin.name();
         tesla.name();
 
+        //扩展新产品，需要修改CarFactory
         Car mobai = CarFactory.getMobai();
         mobai.name();
     }
