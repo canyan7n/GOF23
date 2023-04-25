@@ -7,7 +7,7 @@ package com.canyan7n.principle.di.improve;
  * @date ：2023/4/25 19:51
  * @description：TODO
  */
-public class Pad2 implements Device{
+public class Pad implements Device{
     @Override
     public void play() {
         System.out.println("用平板玩");

@@ -1,5 +1,8 @@
 package com.canyan7n.principle.di.improve;
 
+import com.canyan7n.principle.di.Person;
+import com.canyan7n.principle.di.Phone;
+
 /**
  * @author ：macheng
  * @version V1.0
@@ -11,6 +14,6 @@ public class di2 {
     public static void main(String[] args) {
         Person2 person2 = new Person2();
         person2.play(new Phone2());
-        person2.play(new Pad2());
+        person2.play(new Pad());
     }
 }
