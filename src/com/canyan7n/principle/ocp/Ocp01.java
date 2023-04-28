@@ -21,5 +21,9 @@ public class Ocp01 {
         MatePadFactory matePadFactory = new MatePadFactory();
         Pad matepad = matePadFactory.getPad();
         matepad.name();
+
+        MiPadFactory miPadFactory = new MiPadFactory();
+        Pad mipad = miPadFactory.getPad();
+        mipad.name();
     }
 }
