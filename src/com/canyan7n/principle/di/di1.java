@@ -12,6 +12,7 @@ package com.canyan7n.principle.di;
 public class di1 {
     public static void main(String[] args) {
         Person person = new Person();
-        person.play(new Phone());
+        Phone phone = new Phone();
+        person.play(phone);
     }
 }
