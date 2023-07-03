@@ -16,23 +16,52 @@ import com.canyan7n.single.static_innerclass.CSingleObjectThreadSafe;
  * @version: 1.0
  */
 
-public class Test{
-    public static void main(String[] args) {
-        testHungry();
+public class Test extends Thread{
+    @Override
+    public void run() {
         testLazy();
-        testDoubleLock();
-        testStaticInnerClass();
     }
+
+    public static void main(String[] args) {
+        //testHungry();
+        //testLazy();
+        //testDoubleLock();
+        //testStaticInnerClass();
+        Thread t1 = new Test();
+        Thread t2 = new Test();
+        t1.start();
+        t2.start();
+    }
+    /**
+     * desc 饿汉式
+     * date 2023/7/3
+     * @author macheng
+     **/
     public static void testHungry(){
         HSingleObjectThreadSafe instance = HSingleObjectThreadSafe.getInstance();
     }
-    public static void testLazy(){
+    /**
+     * desc 懒汉式
+     * date 2023/7/3
+     * @author macheng
+     **/
+    public static void testLazy() {
         LSingleObjectThreadSafe safe = LSingleObjectThreadSafe.getInstance();
         LSingleObjectThreadUnsafe unsafe = LSingleObjectThreadUnsafe.getInstance();
     }
+    /**
+     * desc 双检锁
+     * date 2023/7/3
+     * @author macheng
+     **/
     public static void testDoubleLock() {
         DSingleObjectThreadSafe instance = DSingleObjectThreadSafe.getInstance();
     }
+    /**
+     * desc 静态内部类
+     * date 2023/7/3
+     * @author macheng
+     **/
     private static void testStaticInnerClass() {
         CSingleObjectThreadSafe instance = CSingleObjectThreadSafe.getInstance();
     }
