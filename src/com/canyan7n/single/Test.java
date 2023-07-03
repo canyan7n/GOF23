@@ -1,9 +1,10 @@
 package com.canyan7n.single;
 
-import com.canyan7n.single.doublelock.DSingleObject;
+import com.canyan7n.single.doublelock.DSingleObjectThreadSafe;
 import com.canyan7n.single.hungry.HSingleObjectThreadSafe;
 import com.canyan7n.single.lazy.LSingleObjectThreadSafe;
 import com.canyan7n.single.lazy.LSingleObjectThreadUnsafe;
+import com.canyan7n.single.static_innerclass.CSingleObjectThreadSafe;
 
 /**
  * @projectName: GOF23
@@ -18,8 +19,9 @@ import com.canyan7n.single.lazy.LSingleObjectThreadUnsafe;
 public class Test{
     public static void main(String[] args) {
         testHungry();
-        testDoubleLock();
         testLazy();
+        testDoubleLock();
+        testStaticInnerClass();
     }
     public static void testHungry(){
         HSingleObjectThreadSafe instance = HSingleObjectThreadSafe.getInstance();
@@ -29,6 +31,9 @@ public class Test{
         LSingleObjectThreadUnsafe unsafe = LSingleObjectThreadUnsafe.getInstance();
     }
     public static void testDoubleLock() {
-        DSingleObject instance = DSingleObject.getInstance();
+        DSingleObjectThreadSafe instance = DSingleObjectThreadSafe.getInstance();
+    }
+    private static void testStaticInnerClass() {
+        CSingleObjectThreadSafe instance = CSingleObjectThreadSafe.getInstance();
     }
 }
