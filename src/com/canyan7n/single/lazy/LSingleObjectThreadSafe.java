@@ -20,7 +20,7 @@ public class LSingleObjectThreadSafe {
         if (instance == null){
             instance = new LSingleObjectThreadSafe();
         }
-        System.out.println("创建实例");
+        System.out.println("懒汉式创建实例，线程安全");
         return instance;
     }
 }

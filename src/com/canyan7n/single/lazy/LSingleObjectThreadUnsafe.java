@@ -20,7 +20,7 @@ public class LSingleObjectThreadUnsafe {
         if (instance == null){
             instance = new LSingleObjectThreadUnsafe();
         }
-        System.out.println("创建实例");
+        System.out.println("懒汉式创建实例，线程不安全");
         return instance;
     }
 }

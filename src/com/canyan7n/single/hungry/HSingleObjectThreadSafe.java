@@ -7,7 +7,7 @@ public class HSingleObjectThreadSafe {
     private HSingleObjectThreadSafe() {
     }
     public static synchronized HSingleObjectThreadSafe getInstance(){
-        System.out.println("创建实例");
+        System.out.println("饿汉式创建实例");
         return instance;
     }
 }
